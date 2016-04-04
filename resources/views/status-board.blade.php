@@ -1,13 +1,20 @@
+<!-- Force the panel to refresh every 30 seconds -->
+<meta 
+	data-refresh-every-n-seconds="30"
+	application-name="DC Metro Status Board"
+	data-allows-resizing="YES"
+/>
+
 <style>
 	table {
-		font-family: serif;
+		font-size: 12px;
 	}
 	th, td {
 		text-align: center;
 	}
 </style>
 
-<table class="table table-striped" data-refresh-every-n-seconds="30">
+<table class="metro-table">
 	<thead>
 		<tr>
 			<th>Line</th>
