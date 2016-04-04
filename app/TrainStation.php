@@ -70,7 +70,39 @@ class TrainStation {
 
 		}
 
+		$train_objects = $this->filter_no_passenger_trains($train_objects);
+
 		return $train_objects;
+
+	}
+
+	protected function filter_no_passenger_trains(array $trains){
+
+		$invalid_destinations = array(
+			'Train'
+		);
+
+		$invalid_lines = array(
+			'--'
+		);
+
+		if ($trains){
+
+			foreach ($trains as $key=>$train){
+
+				if (in_array($train->get_destination(), $invalid_destinations)){
+					unset($trains[$key]);
+				}
+
+				if (in_array($train->get_destination(), $invalid_destinations)){
+					unset($trains[$key]);
+				}
+
+			}
+
+		}
+
+		return $trains;
 
 	}
 
