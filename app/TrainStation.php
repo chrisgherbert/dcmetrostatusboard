@@ -79,11 +79,13 @@ class TrainStation {
 	protected function filter_no_passenger_trains(array $trains){
 
 		$invalid_destinations = array(
-			'Train'
+			'Train',
+			'No Passenger'
 		);
 
 		$invalid_lines = array(
-			'--'
+			'--',
+			'No'
 		);
 
 		if ($trains){
